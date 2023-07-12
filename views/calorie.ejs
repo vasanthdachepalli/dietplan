@@ -47,12 +47,12 @@
           <button type="submit" value="submit">Add</button>
         </div>
       </form>
-      <label for="">Add from Diet</label>
+      <label for="">Add from Favoriate Diet</label>
       <form action="/caloriefav" method="post">
         <div class="horizontal-strip2">
           <select name="item" id="item">
             <% fav.forEach((i)=>{ %>
-                <option  value= <%= i.name.toString() %> ><%=i.name%></option>
+                <option  value= <%= i.id %> ><%=i.name%></option>
                 <% })%>
             
           </select>
@@ -69,7 +69,7 @@
         <div class="intake2">
           <ul>
             <% List.forEach((i)=> {%>
-            <li> name: <%=i.name %>   calorieintake: <%=i.calorie%>    amount:<%=i.ammount %></li>
+            <li> name: <%=i.name %>   &emsp; calorieintake: <%=i.calorie%>   &emsp; amount:<%=i.ammount %>grams</li>
             <%})%>
           </ul>
         </div>

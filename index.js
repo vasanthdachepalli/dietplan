@@ -139,6 +139,7 @@ app.all("/fav/remove",require('./controller/fav2'));
 app.all("/addfav",require('./controller/fav1'));
 app.all('/fav',require('./controller/fav'));
 app.all('/submit',require('./controller/index'));
+app.all("/caloriefav",require("./controller/fav_add"))
 //---------------------------------------------------------------------------------------------------------------
 app.get("/logout", function(req, res){
   req.logout();
