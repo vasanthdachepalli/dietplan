@@ -51,6 +51,8 @@ body {
 /* Style the intake and target divs */
 /* Style the intake and target divs */
 /* Style the intake and target divs */
+/* Style the intake and target divs */
+/* Style the intake and target divs */
 .intake,
 .target {
   flex-basis: 30%;
@@ -65,25 +67,29 @@ body {
 
 .content-wrapper {
   display: flex;
-  align-items: flex-start;
+  align-items: center; /* Align items vertically */
+  justify-content: center; /* Align items horizontally */
+  flex-direction: column; /* Stack elements vertically */
+  height: 100%; /* Expand the wrapper to fill the parent div */
 }
 
 .intake img,
 .target img {
   width: 17%;
-  margin-right: 10px;
+  margin-bottom: 10px; /* Add spacing between image and paragraph */
 }
 
 .right-paragraph {
   margin: 0;
-  align-self: flex-start; /* Position to the right of the image */
+  font-size: 1.2rem; /* Adjust the font size for the first paragraph */
 }
 
 .bottom-paragraph {
   margin: 0;
-  position: absolute;
-  bottom: 0;
+  font-size: 1rem; /* Adjust the font size for the second paragraph */
 }
+
+
   .intake:hover,
   .target:hover {
     transform: translateY(-5px);
