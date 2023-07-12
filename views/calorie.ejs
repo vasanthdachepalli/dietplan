@@ -69,7 +69,7 @@
         <div class="intake2">
           <ul>
             <% List.forEach((i)=> {%>
-            <li> name: <%=i.name %>   &emsp; calorieintake: <%=i.calorie%>   &emsp; amount:<%=i.ammount %>grams</li>
+            <li> name: <%=i.name %>   &emsp; calorieintake: <%=i.calorie%>   &emsp; amount:<%=i.ammount %>grams &emsp; <a href= <%="/caloriediet/?id="+ i._id %> >remove</a></li>
             <%})%>
           </ul>
         </div>

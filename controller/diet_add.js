@@ -6,6 +6,32 @@ const mongoose = require("mongoose");
 const express= require("express");
 
 const app = express();
+app.get("/caloriediet",function(req,res){
+   caloriedata.findOne({tag:req.user.username})
+   .then((doc)=>{
+      foodintake.findOne({_id:req.query.id})
+      .then((doc1)=>{
+carlor = doc.calorie - doc1.calorie;
+caloriedata.findOneAndUpdate({tag:req.user.username},{calorie:carlor})
+.then(()=>{
+   console.log("done")
+})
+.catch((err)=>{
+   console.log(err);
+})
+
+
+      })
+      foodintake.deleteMany({_id:req.query.id})
+      .then(()=>{
+         console.log("removeed succussfully")
+      })
+      .catch((err)=>{
+         console.log(err);
+      })
+   })
+   res.redirect("/calorie");
+})
 app.post("/caloriediet",function(req,res){
    caloriedata.findOne({tag:req.user.username})
    .then((doc)=>{
