@@ -37,7 +37,7 @@
         <div class="horizontal-strip">
           <select name="items" id="item">
             <% diet.forEach((i)=>{ %>
-            <option value=<%=i.name %>><%= i.name%></option>
+            <option value=<%= i.id %>><%= i.name%></option>
             <% })%>
           </select>
           <div class="amount-box">
@@ -52,7 +52,7 @@
         <div class="horizontal-strip2">
           <select name="item" id="item">
             <% fav.forEach((i)=>{ %>
-                <option value=<%=i.name%>><%=i.name%></option>
+                <option  value= <%= i.name.toString() %> ><%=i.name%></option>
                 <% })%>
             
           </select>

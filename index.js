@@ -134,7 +134,7 @@ app.post("/submit/add",upload.single('image'),function(req,res){
 })
 //------------------------------control swifter the statements used to give control to another files ---------------------------------------------
 app.all("/calorie",require("./controller/calorie_tracker"));
-
+app.all("/caloriediet",require("./controller/diet_add"));
 app.all("/fav/remove",require('./controller/fav2'));
 app.all("/addfav",require('./controller/fav1'));
 app.all('/fav',require('./controller/fav'));
