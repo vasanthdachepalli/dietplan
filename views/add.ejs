@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/add.css">
+    <title>Add</title>
+</head>
+<body>
+    
+        <header>
+            <nav class="navbar">
+                <a href="#">Home</a>
+                <a href="/submit">Diet</a>
+                <a href="/fav">FavDiet</a>
+                <a href="#">DietPlan</a>
+                <a href="#">Contact</a>
+                <a href="/display">Profile</a>
+           </nav>
+    
+           <div class="icon">
+            <a href="#" class="fas fa-user"></a>
+           </div>
+        </header>
+    <div class="form-container">
+        <div class="form-box">
+            <form method="post" action="/submit/add" enctype="multipart/form-data"></form>
+                <br>
+                Image:
+                <input type="file" name="image" required>
+                <br>
+                Name of the item:
+                <input type="text" name="name" required autofocus>
+                <br>
+                Carbohydrates:
+                <input type="number" name="carbo" required>
+                <br>
+                Proteins:
+                <input type="number" name="protein" required>
+                <br>
+                Fats:
+                <input type="number" name="fat" required>
+                <br>
+                Calories:
+                <input type="number" name="calorie" required>
+                <br>
+                <input type="submit" value="submit" required>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/diet1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Diet plans</title>
+</head>
+<body>
+<div class="main">
+    
+    <header>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="/submit">Diet</a>
+            <a href="/fav">FavDiet</a>
+            <a href="#">DietPlan</a>
+            <a href="#">Contact</a>
+            <a href="/display">profile</a>
+       </nav>
+
+       <div class="icon">
+        <a href="#" class="fas fa-user"></a>
+       </div>
+    </header>
+
+    <div class="content">
+        <h2>Eat Healthy... Live Healthy...</h2>
+        <p>Add required items , start your diet from today</p>
+    </div>
+
+    <div class="items">
+        <% List.forEach((i)=>{ %>
+        <div class="box" style="flex-grow: 0;">
+
+            <div class="image"><img src= <%="./uploads/"+ i.imag %> alt="image not uploaded"></div>
+
+            <div class="blocks">
+                <h2> <%= i.name %> </h2>
+                <p>Carbohydrate (<%= i.carbo %> %) <br> Fat (<%= i.fat %> %) <br> Protein (<%= i.protein%> %)</p>
+                <h3><%= i.calorie %> K cal</h3>
+            </div>
+
+            <div class="adre">
+              
+                <div class="rem"><a href=<%= "/fav/remove/?id="+ i._id %>>REMOVE</a></div>
+            </div>
+        </div>
+        <% }) %>
+        <br>
+        
+    </div>
+
+
+
+
+</div>
+<br>
+
+</body>
+</html>
