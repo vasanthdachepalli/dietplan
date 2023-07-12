@@ -1,4 +1,4 @@
-var cc =function(){
+
     let today = new Date();
     let day = "";
     let options = {
@@ -6,6 +6,6 @@ var cc =function(){
         day: "numeric",
         month: "long"
     };
-    day = today.toLocaleDateString("en-US", options);
-}
-module.exports = cc;
+     day = today.toLocaleDateString("en-US", options);
+
+module.exports = day;

@@ -2,7 +2,8 @@ const a = require("./models/calorie_intake");
 const b = require("./models/intake_List")
 const c = require("./index");
 
-const data = require("./date")();
+const data= require("./date");
+console.log(data)
 const deleter = function(){
     c.find({})
     .then((doc)=>{
@@ -12,7 +13,7 @@ const deleter = function(){
     if(count == 0){
         a.create({
          tag:element.username,
-         date:c,
+         date:data,
          calorie:0
         })
     }

@@ -36,9 +36,9 @@
     <form action="/caloriediet" method="post">
         <div class="horizontal-strip">
           <select name="items" id="item">
-            <% diet.forEach(i){ %>
-            <option value=i.name>Item 1</option>
-            <% }%>
+            <% diet.forEach((i)=>{ %>
+            <option value=<%=i.name %>><%= i.name%></option>
+            <% })%>
           </select>
           <div class="amount-box">
             <label for="amount">Amount:</label>
@@ -51,9 +51,9 @@
       <form action="/caloriefav" method="post">
         <div class="horizontal-strip2">
           <select name="item" id="item">
-            <% fav.forEach(i){ %>
-                <option value=i.name>Item 1</option>
-                <% }%>
+            <% fav.forEach((i)=>{ %>
+                <option value=<%=i.name%>><%=i.name%></option>
+                <% })%>
             
           </select>
           <div class="amount-box">
@@ -68,9 +68,9 @@
     </label>
         <div class="intake2">
           <ul>
-            <% List.forEach(i) {%>
+            <% List.forEach((i)=> {%>
             <li> name: <%=i.name %>   calorieintake: <%=i.calorie%> </li>
-            <%} %>
+            <%})%>
           </ul>
         </div>
 </body>
