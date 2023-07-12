@@ -47,17 +47,43 @@ body {
   }
   
   /* Style the intake and target divs */
-  .intake,
-  .target {
-    flex-basis: 30%;
-    padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #f2f2f2;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-    height: 15vh; /* Increase the height */
-  }
-  
+  /* Style the intake and target divs */
+/* Style the intake and target divs */
+/* Style the intake and target divs */
+/* Style the intake and target divs */
+.intake,
+.target {
+  flex-basis: 30%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  height: 15vh;
+  position: relative;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.intake img,
+.target img {
+  width: 17%;
+  margin-right: 10px;
+}
+
+.right-paragraph {
+  margin: 0;
+  align-self: flex-start; /* Position to the right of the image */
+}
+
+.bottom-paragraph {
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+}
   .intake:hover,
   .target:hover {
     transform: translateY(-5px);
