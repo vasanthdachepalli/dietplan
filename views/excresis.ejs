@@ -39,16 +39,16 @@
       
     </div>
     <label for="">Add from exresise you have done</label>
-    <form action="/excerise" method="post">
+    <form action="/exe_add" method="post">
         <div class="horizontal-strip">
           <select name="item" id="item">
             <% Exe.forEach((i)=>{ %>
-            <option value= <%= i._id %> > <%= i.name %></option>
+            <option value= <%= i.id %> > <%= i.name %></option>
             <% }) %>
           </select>
           <div class="amount-box">
             <label for="amount">Amount:</label>
-            <input type="text" id="amount" name="amount" placeholder="Enter in minutes">
+            <input type="text" id="amount" name="amount" placeholder="Enter the duration in minutes">
           </div>
           <button type="submit">Add</button>
         </div>
@@ -60,7 +60,7 @@
         <div class="intake2">
           <ul>
             <% List.forEach((i)=>{ %>
-            <li>name: <%= i.name + "  " %> duration: <%= i.time%>   calorieburned: <%= i.burn %></li>
+            <li>name: <%= i.name + "  " %> duration: <%= i.duration %>minutes    calorieburned: <%= i.calorie %></li>
             <% }) %>
           </ul>
         </div>

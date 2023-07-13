@@ -133,6 +133,7 @@ app.post("/submit/add",upload.single('image'),function(req,res){
    res.redirect("/submit");
 })
 //------------------------------control swifter the statements used to give control to another files ---------------------------------------------
+app.all("/exe_add",require("./controller/control_excerise"));
 app.all("/exercise",require("./controller/excersie"));
 app.all("/calorie",require("./controller/calorie_tracker"));
 app.all("/caloriediet",require("./controller/diet_add"));
