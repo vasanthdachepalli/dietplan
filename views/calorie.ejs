@@ -13,24 +13,33 @@
             <a href="/submit">Diet</a>
             <a href="/fav">FavDiet</a>
             <a href="/calorie">calorie tracker</a>
-            <a href="/exercise">Contact</a>
+            <a href="/exercise">exe tracker</a>
             <a href="/display">profile</a>
         </nav>
     </header>
 
     <h1>This is Heading</h1>
 
+  
+
+
     <div class="container">
-        <div class="intake">
-            <img src="https://clipartcraft.com/images/fire-clipart-emoji-2.png" alt="" width="17%">
-            <p><%= calorie %></p>
-            <p>You have taken this many calories</p>
+      <div class="intake">
+        <div class="content-wrapper">
+          <img src="https://clipartcraft.com/images/fire-clipart-emoji-2.png" alt="" width="17%">
+          <p class="right-paragraph"><%= calorie %> </p>
+          <p class="bottom-paragraph">you have taken this many calories</p>
         </div>
-        <div class="target">
-            <img src="https://tse4.mm.bing.net/th/id/OIP.-BhUDGbOZj73zmTY9ohOCAHaGd?pid=ImgDet&rs=1" alt="" width="17%">
-            <p>1000</p>
-            <p>This is your target</p>
+      </div>
+      
+      <div class="target">
+        <div class="content-wrapper">
+          <img src="https://tse4.mm.bing.net/th/id/OIP.-BhUDGbOZj73zmTY9ohOCAHaGd?pid=ImgDet&rs=1" alt="" width="17%">
+          <p class="right-paragraph">1000</p>
+          <p class="bottom-paragraph">This is your target</p>
         </div>
+      </div>
+      
     </div>
     <label for="">Add from Diet</label>
     <form action="/caloriediet" method="post">
