@@ -1,138 +1,170 @@
 body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Style the navbar */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .navbar a {
-    font-size: 1.5rem;
-    padding: 0 1.5rem;
-    color: rgb(5, 5, 5);
-    text-decoration: none;
-    font-weight: bold;
-    transition: ease 1s;
-  }
-  
-  .navbar a:hover {
-    color: rgb(28, 97, 248);
-  }
-  
-  /* Style the header */
-  header {
-    position: relative;
-    background: rgb(161, 247, 167);
-    padding: 1rem 10%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 1rem 1rem rgb(95, 185, 140);
-  }
-  
-  header .icon a {
-    font-size: 2rem;
-    font-weight: bolder;
-    color: black;
-  }
-  
-  /* Style the container */
-  .container {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-  }
-  
-  /* Style the intake and target divs */
-  .intake,
-  .target {
-    flex-basis: 30%;
-    padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #f2f2f2;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-    height: 15vh; /* Increase the height */
-  }
-  
-  .intake:hover,
-  .target:hover {
-    transform: translateY(-5px);
-  }
-  
-  /* Style the h1 */
-  h1 {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  /* Additional CSS for form contents */
-  form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .horizontal-strip {
-    display: flex;
-    align-items: center;
-    margin: 0 20px; /* Add left and right margins */
-    background-color: #f8f8f8; /* Set background color */
-    padding: 10px; /* Add padding */
-    border: 1px solid #ccc; /* Add border */
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* Add box shadow */
-    width: 100%; /* Set width to 100% */
-    margin-bottom: 10%;
-  }
-  
-  .horizontal-strip select,
-  .horizontal-strip .amount-box,
-  .horizontal-strip button {
-    margin: 0 10px; /* Add equal space between contents */
-  }
-  
-  .horizontal-strip .amount-box {
-    flex-grow: 1; /* Allow amount box to grow and fill remaining space */
-  }
-  .horizontal-strip2 {
-    display: flex;
-    align-items: center;
-    margin: 0 20px; /* Add left and right margins */
-    background-color: #f8f8f8; /* Set background color */
-    padding: 10px; /* Add padding */
-    border: 1px solid #ccc; /* Add border */
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* Add box shadow */
-    width: 100%; /* Set width to 100% */
-    margin-bottom: 5%;
-  }
-  
-  .horizontal-strip2 select,
-  .horizontal-strip2 .amount-box,
-  .horizontal-strip2 button {
-    margin: 0 10px; /* Add equal space between contents */
-  }
-  
-  .horizontal-strip2 .amount-box {
-    flex-grow: 1; /* Allow amount box to grow and fill remaining space */
-  }
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar a {
+  font-size: 1.5rem;
+  padding: 0 1.5rem;
+  color: rgb(5, 5, 5);
+  text-decoration: none;
+  font-weight: bold;
+  transition: ease 1s;
+}
+
+.navbar a:hover {
+  color: rgb(28, 97, 248);
+}
+
+/* Style the header */
+header {
+  position: relative;
+  background: rgb(161, 247, 167);
+  padding: 1rem 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1rem 1rem rgb(95, 185, 140);
+}
+
+header .icon a {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: black;
+}
+
+/* Style the container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+/* Style the intake and target divs */
+/* Style the intake and target divs */
+/* Style the intake and target divs */
+/* Style the intake and target divs */
+/* Style the intake and target divs */
+/* Style the intake and target divs */
+/* Style the intake and target divs */
+.intake,
+.target {
+flex-basis: 30%;
+padding: 20px;
+border: 1px solid #ccc;
+background-color: #f2f2f2;
+box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+transition: transform 0.3s ease-in-out;
+height: 15vh;
+position: relative;
+}
+
+.content-wrapper {
+display: flex;
+align-items: center; /* Align items vertically */
+justify-content: center; /* Align items horizontally */
+flex-direction: column; /* Stack elements vertically */
+height: 100%; /* Expand the wrapper to fill the parent div */
+}
+
+.intake img,
+.target img {
+width: 17%;
+margin-bottom: 10px; /* Add spacing between image and paragraph */
+}
+
+.right-paragraph {
+margin: 0;
+font-size: 1.2rem; /* Adjust the font size for the first paragraph */
+}
+
+.bottom-paragraph {
+margin: 0;
+font-size: 1rem; /* Adjust the font size for the second paragraph */
+}
+
+
+.intake:hover,
+.target:hover {
+  transform: translateY(-5px);
+}
+
+/* Style the h1 */
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Additional CSS for form contents */
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.horizontal-strip {
+  display: flex;
+  align-items: center;
+  margin: 0 20px; /* Add left and right margins */
+  background-color: #f8f8f8; /* Set background color */
+  padding: 10px; /* Add padding */
+  border: 1px solid #ccc; /* Add border */
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* Add box shadow */
+  width: 100%; /* Set width to 100% */
+  margin-bottom: 10%;
+}
+
+.horizontal-strip select,
+.horizontal-strip .amount-box,
+.horizontal-strip button {
+  margin: 0 10px; /* Add equal space between contents */
+}
+
+.horizontal-strip .amount-box {
+  flex-grow: 1; /* Allow amount box to grow and fill remaining space */
+}
+.horizontal-strip2 {
+  display: flex;
+  align-items: center;
+  margin: 0 20px; /* Add left and right margins */
+  background-color: #f8f8f8; /* Set background color */
+  padding: 10px; /* Add padding */
+  border: 1px solid #ccc; /* Add border */
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* Add box shadow */
+  width: 100%; /* Set width to 100% */
+  margin-bottom: 5%;
+}
+
+.horizontal-strip2 select,
+.horizontal-strip2 .amount-box,
+.horizontal-strip2 button {
+  margin: 0 10px; /* Add equal space between contents */
+}
+
+.horizontal-strip2 .amount-box {
+  flex-grow: 1; /* Allow amount box to grow and fill remaining space */
+}
 
 .intake2 {
-    flex-basis: 30%;
-    padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #f2f2f2;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-    height: 15vh; /* Increase the height */
-    margin: 0% 2.7% 2.7%;
-  }
-  
-  .intake2:hover{
-    transform: translateY(5px);
-  }
+  flex-basis: 30%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  height: 15vh; /* Increase the height */
+  margin: 0% 2.7% 2.7%;
+}
+
+.intake2:hover{
+  transform: translateY(5px);
+}
 label{
-  margin-left: 3%;
+margin-left: 3%;
 }
