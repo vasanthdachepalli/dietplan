@@ -5,6 +5,49 @@ const profile = require("../models/profile");
 const mongoose = require("mongoose");
 const express= require("express");
 const app = express();
+app.get("/exe_add",(req,res)=>{
+    let tag1 = req.user.username;
+    exceriseintake.findOne({id : req.query.id})
+    .then((doc)=>{
+         caloriedata.findOne({tag:tag1})
+         .then(doc1 =>{
+              let calor = doc1.calorie1;
+              calor = calor - doc.calorie;
+              caloriedata.updateOne({tag:tag1},{calorie1:calor})
+              .then(()=>{
+                console.log("ud");
+              })
+              .catch((err)=>{
+                console.log(err);
+              })
+         })
+         .catch((err)=>{
+            console.log(err);
+          })
+         
+
+    })
+    .catch((err)=>{
+        console.log(err);
+      })
+
+      exceriseintake.deleteOne({id : req.query.id})
+      .then(()=>{
+        console.log("deleted succsesfully");
+      })
+      .catch((err)=>{
+        console.log(err);
+      })
+      res.redirect("/exercise");
+
+
+})
+
+
+
+
+
+
 app.post("/exe_add",(req,res)=>{
 let tag1 = req.user.username;
 data.findOne({_id:req.body.item})
