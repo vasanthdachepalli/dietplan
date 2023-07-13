@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link href="css/profile.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container"> 
+        <div class = "box">
+            <form class="form" action ="/profileedit" method ="post" enctype="multipart/form-data">
+                <img class="im" src="./uploads/profile.jpg" alt="" width="72" height="72">
+                <input class = "file" type="file" name="image" required>                 
+                <input class="type-1" type="text" placeholder="Name" name="name" required autofocus>
+                <input type="number" placeholder="Age" name ="age" required>
+                <input type="number" placeholder="Height in feet" name="height" required>
+                <input type="number" placeholder="Weight in K.G's" name="weight" required>
+                <div class="radio-group">
+                    <label>
+                      <input class="radio radio-left" type="radio" name="gender" id="Gender" value="male" checked/>
+                      Male
+                    </label>
+                    <label>
+                      <input class="radio radio-right" type="radio" name="gender" value="female" id="Gender"/>
+                      Female
+                    </label>
+                </div> 
+                <input class = "Login" type="submit" value="Submit">  
+            </form>
+           
+        </div>
+    </div>
+</body>
+</html>

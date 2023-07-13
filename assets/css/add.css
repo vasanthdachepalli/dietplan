@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 3rem 0 0;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(161, 247, 167);
+    padding: 1rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1rem 1rem rgb(95, 185, 140);
+    z-index: 1;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .navbar a {
+    font-size: 1.5rem;
+    padding: 0 1.5rem;
+    color: #050505;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    color: rgb(28, 97, 248);
+  }
+  
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: calc(100vh - 3rem);
+    padding: 3rem 0;
+    background-image: url("https://i.ytimg.com/vi/_uYbWXY8bWI/maxresdefault.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .form-box {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    width: 500px;
+    transform: translateZ(0);
+    margin-top: 5%;
+  }
+  
+  .form-box input[type="file"],
+  .form-box input[type="text"],
+  .form-box input[type="number"],
+  .form-box input[type="submit"] {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .form-box input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .form-box input[type="submit"]:hover {
+    background-color: #45a049;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .form-box input[type="file"]:focus,
+  .form-box input[type="text"]:focus,
+  .form-box input[type="number"]:focus {
+    outline: none;
+    box-shadow: 0 0 4px #4CAF50;
+  }
+  
