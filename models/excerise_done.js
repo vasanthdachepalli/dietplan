@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const exceriseschema = new mongoose.Schema({
     tag:String,
     name:String,
-    date:require("../date"),
+    date:String,
     duration:Number,
     calorie:Number
 }

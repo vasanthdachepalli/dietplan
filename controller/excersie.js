@@ -10,11 +10,11 @@ app.set('views', path.join(__dirname, '../views'))
 app.set('view engine', 'ejs');
 app.get("/exercise",function(req,res){
     let tag1 = req.user.username;
-    data.findOne({id : req.body.item})
+    data.find({})
     .then((doc)=>{
         exceriseintake.find({tag:tag1})
         .then((doc1)=>{
-            caloriedata.findone({tag:tag1})
+            caloriedata.findOne({tag:tag1})
             .then((doc2)=>{
                res.render("excresis",{Burned_calorie:doc2.calorie1,Exe:doc,List:doc1})
             })
