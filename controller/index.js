@@ -22,7 +22,8 @@ app.use(bodyParser.urlencoded({
 //-----------------------------------------------------------------------------------------
 
 app.get("/submit", function(req, res){
-
+  let a = require("../delete.js");
+  a();
     if (req.isAuthenticated()){
   
     data.find({ tag: req.user.username })
@@ -39,6 +40,7 @@ app.get("/submit", function(req, res){
     }
   });
   app.post("/submit",function(req,res){
+    
      data.findOne({_id :id})
      .then(doc =>{
       favdata.create({

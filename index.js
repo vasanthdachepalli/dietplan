@@ -133,10 +133,15 @@ app.post("/submit/add",upload.single('image'),function(req,res){
    res.redirect("/submit");
 })
 //------------------------------control swifter the statements used to give control to another files ---------------------------------------------
+app.all("/exe_add",require("./controller/control_excerise"));
+app.all("/exercise",require("./controller/excersie"));
+app.all("/calorie",require("./controller/calorie_tracker"));
+app.all("/caloriediet",require("./controller/diet_add"));
 app.all("/fav/remove",require('./controller/fav2'));
 app.all("/addfav",require('./controller/fav1'));
 app.all('/fav',require('./controller/fav'));
 app.all('/submit',require('./controller/index'));
+app.all("/caloriefav",require("./controller/fav_add"))
 //---------------------------------------------------------------------------------------------------------------
 app.get("/logout", function(req, res){
   req.logout();
@@ -217,6 +222,8 @@ app.post("/login", function(req, res){
     } else {
       console.log("check 1");
       passport.authenticate("local")(req, res, function(){
+        let b = require("./delete")
+        b();
         console.log("check 2");
         res.redirect("/submit");
     

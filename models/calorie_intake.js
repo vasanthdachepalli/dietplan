@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 const calorieschema = new mongoose.Schema({
 tag:String,
 date:String,
-calorie:Number
-
+calorie:Number,
+calorie1:Number
 
 
 })

@@ -4,7 +4,7 @@
   "description": "dietplan for people based on their BMI,and place to add the ideatils of food ,your favoriate meals.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1" 
   },
   "author": "vasanth",
   "license": "ISC",
