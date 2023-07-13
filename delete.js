@@ -1,7 +1,7 @@
 const a = require("./models/calorie_intake");
 const b = require("./models/intake_List")
 const c = require("./index");
-
+const d = require("./models/excerise_done");
 const data= require("./date");
 console.log(data)
 const deleter = function(){
@@ -29,14 +29,21 @@ const deleter = function(){
   })
     a.deleteMany({date :{$ne:data}})
     .then(()=>{
-        console.log("deleteted suffully");
+       // console.log();
     })
     .catch((err)=>{
         console.log("err");
     })
     b.deleteMany({date:{$ne:data}})
     .then(()=>{
-        console.log("deleted successfully");
+        //console.log();
+    })
+    .catch((err)=>{
+        console.log(err);
+    })
+    d.deleteMany({date:{$ne:data}})
+    .then(()=>{
+        //console.log();
     })
     .catch((err)=>{
         console.log(err);
