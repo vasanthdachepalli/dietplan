@@ -60,7 +60,7 @@
         <div class="intake2">
           <ul>
             <% List.forEach((i)=>{ %>
-            <li>name: <%= i.name + "  " %> duration: <%= i.duration %>minutes    calorieburned: <%= i.calorie %></li>
+            <li>name: <%= i.name + "  " %> duration: <%= i.duration %>minutes    calorieburned: <%= i.calorie %>    <a href=<%="/exe_add/?id" + i.id %>>remove</a></li>
             <% }) %>
           </ul>
         </div>
