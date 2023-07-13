@@ -14,7 +14,8 @@ const deleter = function(){
         a.create({
          tag:element.username,
          date:data,
-         calorie:0
+         calorie:0,
+         calorie1:0
         })
     }
   })
