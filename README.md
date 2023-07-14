@@ -1,1 +1,15 @@
 # dietplan
+This is done by 
+Vasanth kumar Dachepalli ,Venketa Krishna ,ojaswini mukhee 
+DIFFERENT THINGS USED IN OUR PROJECT
+Languagues used:EJS,Css,JAVASCRIPT
+FRAMEWORKS:BOOTSTRAP.
+BACKEND SERVER:NODE.JS
+DATABASE:MONGODB (ODM:MONGOOSE)
+
+ABOUT THE PROJECT:
+
+
+
+
+OUR KEY FEATURES:
