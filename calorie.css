@@ -1,170 +1,245 @@
 body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Style the navbar */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .navbar a {
-    font-size: 1.5rem;
-    padding: 0 1.5rem;
-    color: rgb(5, 5, 5);
-    text-decoration: none;
-    font-weight: bold;
-    transition: ease 1s;
-  }
-  
-  .navbar a:hover {
-    color: rgb(28, 97, 248);
-  }
-  
-  /* Style the header */
-  header {
-    position: relative;
-    background: rgb(161, 247, 167);
-    padding: 1rem 10%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 1rem 1rem rgb(95, 185, 140);
-  }
-  
-  header .icon a {
-    font-size: 2rem;
-    font-weight: bolder;
-    color: black;
-  }
-  
-  /* Style the container */
-  .container {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-  }
-  
-  /* Style the intake and target divs */
-  /* Style the intake and target divs */
-/* Style the intake and target divs */
-/* Style the intake and target divs */
-/* Style the intake and target divs */
-/* Style the intake and target divs */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar a {
+  font-size: 1.5rem;
+  padding: 0 1.5rem;
+  color: rgb(5, 5, 5);
+  text-decoration: none;
+  font-weight: bold;
+  transition: ease 1s;
+}
+
+.navbar a:hover {
+  color: rgb(28, 97, 248);
+}
+
+/* Style the header */
+header {
+  position: relative;
+  background: rgb(161, 247, 167);
+  padding: 1rem 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1rem 1rem rgb(95, 185, 140);
+}
+
+header .icon a {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: black;
+}
+
+/* Style the container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
 /* Style the intake and target divs */
 .intake,
-.target {
+.target,
+.intake2 {
   flex-basis: 30%;
   padding: 20px;
   border: 1px solid #ccc;
-  background-color: #f2f2f2;
+  background-color: #f8f8f8;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
-  height: 15vh;
   position: relative;
+}
+
+.intake:hover,
+.target:hover,
+.intake2:hover {
+  transform: translateY(-5px);
 }
 
 .content-wrapper {
   display: flex;
-  align-items: center; /* Align items vertically */
-  justify-content: center; /* Align items horizontally */
-  flex-direction: column; /* Stack elements vertically */
-  height: 100%; /* Expand the wrapper to fill the parent div */
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
 }
 
 .intake img,
-.target img {
+.target img,
+.intake2 img {
   width: 17%;
-  margin-bottom: 10px; /* Add spacing between image and paragraph */
+  margin-bottom: 10px;
 }
 
 .right-paragraph {
   margin: 0;
-  font-size: 1.2rem; /* Adjust the font size for the first paragraph */
+  font-size: 1.2rem;
 }
 
 .bottom-paragraph {
   margin: 0;
-  font-size: 1rem; /* Adjust the font size for the second paragraph */
+  font-size: 1rem;
+}
+
+/* Style the h1 */
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Additional CSS for form contents */
+/* Additional CSS for form contents */
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.horizontal-strip,
+.horizontal-strip2 {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+  background-color: #f8f8f8;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.horizontal-strip select,
+.horizontal-strip2 select {
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 1rem;
+  color: #333;
+}
+
+.horizontal-strip .amount-box,
+.horizontal-strip2 .amount-box {
+  flex-grow: 1;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 1rem;
+  color: #333;
+}
+
+.horizontal-strip button,
+.horizontal-strip2 button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(28, 97, 248);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 
-  .intake:hover,
-  .target:hover {
-    transform: translateY(-5px);
-  }
-  
-  /* Style the h1 */
-  h1 {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  /* Additional CSS for form contents */
-  form {
-    display: flex;
+
+
+.horizontal-strip button:hover,
+.horizontal-strip2 button:hover {
+  background-color: rgb(19, 68, 180);
+}
+
+.horizontal-strip .amount-box::placeholder,
+.horizontal-strip2 .amount-box::placeholder {
+  color: #999;
+}
+
+/* Additional styles for enhanced visual appearance */
+.container {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.intake,
+.target {
+  border-radius: 4px;
+}
+
+.intake img,
+.target img {
+  width: 20%;
+  margin-bottom: 10px;
+}
+
+.right-paragraph {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.bottom-paragraph {
+  margin: 0;
+  font-size: 1rem;
+  color: #888;
+}
+
+.intake:hover,
+.target:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.intake2 {
+  flex-basis: calc(100% - 40px);
+  margin: 0 20px;
+}
+
+.intake2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    margin: 20px;
   }
-  
-  .horizontal-strip {
-    display: flex;
-    align-items: center;
-    margin: 0 20px; /* Add left and right margins */
-    background-color: #f8f8f8; /* Set background color */
-    padding: 10px; /* Add padding */
-    border: 1px solid #ccc; /* Add border */
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* Add box shadow */
-    width: 100%; /* Set width to 100% */
-    margin-bottom: 10%;
+
+  .intake,
+  .target,
+  .intake2 {
+    flex-basis: calc(100% - 40px);
+    margin: 0 20px 20px;
   }
-  
+}
+
+  .horizontal-strip,
+  .horizontal-strip2 {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
   .horizontal-strip select,
   .horizontal-strip .amount-box,
-  .horizontal-strip button {
-    margin: 0 10px; /* Add equal space between contents */
-  }
-  
-  .horizontal-strip .amount-box {
-    flex-grow: 1; /* Allow amount box to grow and fill remaining space */
-  }
-  .horizontal-strip2 {
-    display: flex;
-    align-items: center;
-    margin: 0 20px; /* Add left and right margins */
-    background-color: #f8f8f8; /* Set background color */
-    padding: 10px; /* Add padding */
-    border: 1px solid #ccc; /* Add border */
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* Add box shadow */
-    width: 100%; /* Set width to 100% */
-    margin-bottom: 5%;
-  }
-  
+  .horizontal-strip button,
   .horizontal-strip2 select,
   .horizontal-strip2 .amount-box,
   .horizontal-strip2 button {
-    margin: 0 10px; /* Add equal space between contents */
+    margin: 10px 0;
   }
-  
-  .horizontal-strip2 .amount-box {
-    flex-grow: 1; /* Allow amount box to grow and fill remaining space */
-  }
-
-.intake2 {
-    flex-basis: 30%;
-    padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #f2f2f2;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-    height: 15vh; /* Increase the height */
-    margin: 0% 2.7% 2.7%;
-  }
-  
-  .intake2:hover{
-    transform: translateY(5px);
-  }
-label{
-  margin-left: 3%;
-}
