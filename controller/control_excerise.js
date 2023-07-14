@@ -64,6 +64,10 @@ data.findOne({_id:req.body.item})
            cal = doc.weight2;
            else
            cal = doc.weight3;
+
+           let slope = (doc.weight3- doc.weight1)/(90 -50);
+           let c = doc.weight1 - slope*50;
+           cal = slope*doc2.weight + c;
            let calorie = doc1.calorie1;
            calorie = calorie + parseInt(cal*req.body.amount/30);
            caloriedata.updateOne({tag:tag1},{calorie1:calorie})
