@@ -1,9 +1,13 @@
+
+<!-- add your new style in new_style.css and add class name to the part in this file-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="calorie.css">
+    <link rel="stylesheet" href="css/calorie.css">
+    <link rel="stylesheet" href="css/new_style.css">
     <title>Calorie Tracker</title>
 </head>
 <body>
@@ -12,8 +16,8 @@
             <a href="#">Home</a>
             <a href="/submit">Diet</a>
             <a href="/fav">FavDiet</a>
-            <a href="#">DietPlan</a>
-            <a href="#">Contact</a>
+            <a href="/calorie">calorie tracker</a>
+            <a href="/exercise">exex Tracker</a>
             <a href="/display">profile</a>
         </nav>
     </header>
@@ -24,7 +28,7 @@
       <div class="intake">
         <div class="content-wrapper">
           <img src="https://clipartcraft.com/images/fire-clipart-emoji-2.png" alt="" width="17%">
-          <p class="right-paragraph">100</p>
+          <p class="right-paragraph"><%= Burned_calorie %></p>
           <p class="bottom-paragraph">you have burned this  many calories</p>
         </div>
       </div>
@@ -39,14 +43,16 @@
       
     </div>
     <label for="">Add from exresise you have done</label>
-    <form action="/" method="post">
+    <form action="/exe_add" method="post">
         <div class="horizontal-strip">
           <select name="item" id="item">
-            <option value="item-1">Item 1</option>
+            <% Exe.forEach((i)=>{ %>
+            <option value= <%= i.name %> > <%= i.name %></option>
+            <% }) %>
           </select>
           <div class="amount-box">
             <label for="amount">Amount:</label>
-            <input type="text" id="amount" name="amount" placeholder="Enter in minutes">
+            <input type="text" id="amount" name="amount" placeholder="Enter the duration in minutes">
           </div>
           <button type="submit">Add</button>
         </div>
@@ -57,7 +63,9 @@
     </label>
         <div class="intake2">
           <ul>
-            <li>Hi</li>
+            <% List.forEach((i)=>{ %>
+            <li>name: <%= i.name + "  " %> duration: <%= i.duration %>minutes    calorieburned: <%= i.calorie %>    <a href=<%="/exe_add/?id" + i.id %>>remove</a></li>
+            <% }) %>
           </ul>
         </div>
 </body>
