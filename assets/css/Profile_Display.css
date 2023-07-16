@@ -1,0 +1,86 @@
+body{
+  background-image: url("https://th.bing.com/th/id/R.f62a3f30c5f34a5a8e9135ffd144d58e?rik=6bYeDYxsLD3qTg&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f3%2f2%2f5%2f800580-planet-wallpaper-1920x1080-1920x1080-for-1080p.jpg&ehk=GDgQDzJ6dOSVsXwhyKkS5t3sJk4XDPwX8IBU82Em%2blI%3d&risl=&pid=ImgRaw&r=0");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(161, 247, 167);
+  padding: 0.5rem 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1rem 1rem rgb(95, 185, 140);
+  z-index: 1;
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.navbar a {
+  font-size: 1.5rem;
+  padding: 0 1.5rem;
+  color: #050505;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: rgb(28, 97, 248);
+}
+
+
+.profile-box {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  margin: 100px auto;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  min-height: 400px;
+  margin-top: 10%;
+}
+
+.profile-box h1 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.profile-box img {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.profile-box p {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.edit-profile {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 0.75em;
+  text-decoration: none;
+}
+
+a {
+  margin: 10px 0;
+  font-size: 1.25em;
+  color: rgb(95, 185, 140);
+  text-decoration: none;
+}

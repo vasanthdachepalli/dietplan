@@ -1,3 +1,4 @@
+
 //did not do any changes in this file ,it is a server file//
 
 
@@ -5,6 +6,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
 const ejs = require("ejs");
+
 const app = express();
 app.use(express.static(__dirname+"/assets"));
 app.set('views', path.join(__dirname, 'views'))
@@ -12,6 +14,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({
   extended: true
 }));
+
 List = [{
     name:"backetball",
 },

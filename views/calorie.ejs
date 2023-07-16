@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/calorie.css">
+    <title>Calorie Tracker</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="/submit">Diet</a>
+            <a href="/fav">FavDiet</a>
+            <a href="/calorie">calorie tracker</a>
+            <a href="#">Contact</a>
+            <a href="/display">profile</a>
+        </nav>
+    </header>
+
+    <h1>This is Heading</h1>
+
+    <div class="container">
+        <div class="intake">
+            <img src="https://clipartcraft.com/images/fire-clipart-emoji-2.png" alt="" width="17%">
+            <p><%= calorie %></p>
+            <p>You have taken this many calories</p>
+        </div>
+        <div class="target">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.-BhUDGbOZj73zmTY9ohOCAHaGd?pid=ImgDet&rs=1" alt="" width="17%">
+            <p>1000</p>
+            <p>This is your target</p>
+        </div>
+    </div>
+    <label for="">Add from Diet</label>
+    <form action="/caloriediet" method="post">
+        <div class="horizontal-strip">
+          <select name="items" id="item">
+            <% diet.forEach((i)=>{ %>
+            <option value=<%= i.id %>><%= i.name%></option>
+            <% })%>
+          </select>
+          <div class="amount-box">
+            <label for="amount">Amount:</label>
+            <input type="text" id="amount" name="amount" placeholder="Enter in grams">
+          </div>
+          <button type="submit" value="submit">Add</button>
+        </div>
+      </form>
+      <label for="">Add from Favoriate Diet</label>
+      <form action="/caloriefav" method="post">
+        <div class="horizontal-strip2">
+          <select name="item" id="item">
+            <% fav.forEach((i)=>{ %>
+                <option  value= <%= i.id %> ><%=i.name%></option>
+                <% })%>
+            
+          </select>
+          <div class="amount-box">
+            <label for="amount">Amount:</label>
+            <input type="text" id="amount" name="amount" placeholder="Enter in grams">
+          </div>
+          <button type="submit" value="submit">Add</button>
+        </div>
+      </form>
+      <label for="">
+        You have taken these items today
+    </label>
+        <div class="intake2">
+          <ul>
+            <% List.forEach((i)=> {%>
+            <li> name: <%=i.name %>   &emsp; calorieintake: <%=i.calorie%>   &emsp; amount:<%=i.ammount %>grams &emsp; <a href= <%="/caloriediet/?id="+ i._id %> >remove</a></li>
+            <%})%>
+          </ul>
+        </div>
+</body>
+</html>

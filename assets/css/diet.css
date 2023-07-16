@@ -1,0 +1,242 @@
+/*<!-- @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bacasime+Antique&display=swap');
+-->*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+
+}
+img {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+    border-radius: 50px;
+}
+
+html {
+     scroll-behavior: smooth;
+     scroll-padding-top: 6rem;
+     overflow-x: hidden;
+}
+
+.main {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: url(./images/insidebg.jfif);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    overflow: scroll;
+}
+
+
+.section {
+    padding: 2rem 9%;;
+}
+
+header {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    background: rgb(161, 247, 167);
+    padding: 1rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1rem 1rem rgb(95, 185, 140);
+}
+
+header .icon a{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: black;
+}
+
+
+.navbar a {
+    font-size: 1.5rem;
+    padding: 0 1.5rem;
+    color: rgb(5, 5, 5);
+    text-decoration: none;
+    font-style: bold;
+    transition: ease 1s;
+}
+
+.navbar a:hover {
+    color: rgb(28, 97, 248);
+}
+
+
+@media (max-width: 500px) {
+   html {
+    font-size: 10%;
+   }
+   header {
+    padding: .5rem;
+   }
+}
+
+@media (max-width: 992px) {
+    html {
+        font-size: 80%;
+    }
+    header {
+        padding: 2rem;
+    }
+}
+
+.home {
+    margin-top: 4rem;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.home .content {
+    max-width: 100rem;
+}
+
+    .home .content span {
+        font-size: 4rem;
+        top: 4rem;
+        color: rgb(13, 13, 157);
+    }
+    .home .content p {
+        font-size: 3rem;
+        top: 4rem;
+        font-style: italic;
+    }
+ 
+ @media (max-width: 500px) {
+    .home .content span {
+        font-size: 2rem;
+    }
+    .home .content p {
+        font-size: 1rem;
+    }
+ }
+
+ .content{
+    position: absolute;
+    width: 100vw;
+    text-align: center;
+    top: 10rem;
+    font-size: 3rem;
+    font-family: Kanit;
+    color: rgb(80, 12, 144);
+ }
+
+ .content p {
+    font-family: Fasthand;
+    font-style: bold;
+    color: rgb(7, 90, 90);
+ }
+
+ .items {
+    position: absolute;
+    top: 25rem;
+    right: 4rem;
+    display: flex;
+    left: 5rem;
+    flex-wrap: wrap;
+    gap: 9rem;
+ }
+
+ .box img {
+    position: relative;
+    text-align: center;
+    left: 2rem;
+    top: 2rem;
+ }
+
+ .box {
+    height: 45rem;
+    flex-grow: 0;
+    min-width: 340px;
+    min-height: 720px;
+    border-right: 6rem;
+    flex: 1 1 15rem;
+    box-shadow: 0 .5rem 1.5rem rgb(16, 91, 22);
+    border: .1rem solid black;
+    border-radius: 4rem;
+    position: relative;
+    flex-basis: 25%;
+ }
+
+ .box .blocks {
+    padding: 10px;
+   
+    text-align: center;
+   
+ }
+
+.items .box .adre {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(139, 233, 139);
+    border: .1rem solid black;
+    border-bottom-left-radius: 3.9rem;
+    border-bottom-right-radius: 3.9rem;
+}
+
+.items .box .adre a{
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.5rem;
+    width: 50%;
+    color: black;
+    text-decoration: solid;
+    transition: ease 1s;
+}
+
+.items .box .adre a:hover {
+    color: rgb(2, 127, 17);    
+    text-shadow: 0 1rem 1rem rgb(25, 75, 50);
+}
+
+.items .box .adre .add {
+    border-right: .1rem solid;
+    width: 50%;
+    left: 1rem;
+    padding: 0 4rem;
+    /* text-align: center; */
+}
+
+
+.items .box .adre .rem {
+    width : 50%;
+    position: absolute;
+    top: 0rem;
+    right: -1.5rem;
+    float: right;
+}
+
+
+.items .box .blocks {
+    left: 2rem;
+}
+
+.items .box .blocks h2 {
+    font-size: 2.5rem;
+    font-family: Bacasime Antique;
+}
+
+.items .box .blocks p {
+    font-size: 2rem;
+    font-style: italic;
+}
+
+.items .box .blocks h3 {
+    font-family: Fasthand;
+    font-size: 2.5rem;
+    color: rgb(16, 93, 67);
+}

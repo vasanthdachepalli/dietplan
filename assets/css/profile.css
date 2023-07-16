@@ -1,0 +1,97 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-image: url("../images/OIG.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+input.radio {
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  display: block;
+  margin: 10px;
+  border-width: 3px;
+  padding: 10px;
+  width: 82%;
+}
+
+.box {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2); 
+  margin-left: auto;
+  border: 1px solid #aaa; 
+  border-width: 3px; 
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.im {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.type-1 {
+  display: block;
+  width: 82%;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: space-between;
+  width: 82%;
+  margin: 0 auto;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+}
+
+.radio-group label input {
+  margin-right: 5px;
+}
+
+.radio-left {
+  order: 1;
+}
+
+.radio-right {
+  order: 2;
+}
+.file {
+  margin-left: 30%;
+  border-radius: 10px;
+}
+  .Login {
+    background-color: #1841d5;
+    margin-left: 8%;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px; 
+    margin-bottom: 0px;
+  }
+
+
+
