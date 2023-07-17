@@ -239,7 +239,7 @@ app.post("/login", function(req, res){
 //-----------------------------------------------------------------------------profile page data intaking---------------------------------------------------------------------
 
 function calculateBMI(weight, height) {
-  var heightInMeters = height;
+  var heightInMeters = height/100;
   var bmi = weight / (heightInMeters * heightInMeters);
   bmi = Math.round(bmi * 100) / 100;
   return bmi;
