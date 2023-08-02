@@ -105,6 +105,20 @@ app.get("/register", function(req, res){
   res.render("register");
 });
 app.get("/submit/diet/delete/",function(req,res){
+  data.findOne({_id:req.query.id})
+  .then((doc)=>{
+    let data1 = require("./models/favdiet");
+    data1.deleteOne({name:doc.name,tag:req.user.username})
+    .then(() => {
+      console.log('Element deleted successfully');
+    })
+    .catch((error) => {
+      console.error('Error deleting element:', error);
+    });
+  })
+  .catch((error) => {
+    console.error('Error deleting element:', error);
+  });
   data.deleteOne({ _id:req.query.id })
   .then(() => {
     console.log('Element deleted successfully');
