@@ -6,6 +6,12 @@ const mongoose = require("mongoose");
 const express= require("express");
 const app = express();
 const path = require("path");
+const male = function(mass,age,height){
+return  88.362 + (13.397 * mass) + (4.799 * height ) - (5.677 * age );
+};
+const female = function(mass,age,height){
+    return 447.593 + (9.247 * mass) + (3.098 * height ) - (4.330 * age);
+    };
 app.set('views', path.join(__dirname, '../views'))
 app.set('view engine', 'ejs');
 app.get("/exercise",function(req,res){
@@ -16,7 +22,19 @@ app.get("/exercise",function(req,res){
         .then((doc1)=>{
             caloriedata.findOne({tag:tag1})
             .then((doc2)=>{
-               res.render("excresis",{Burned_calorie:doc2.calorie1,Exe:doc,List:doc1})
+                profile.findOne({email:tag1})
+                .then((doc3)=>{
+                   let tar = 0;
+                   if(doc3.gender == "male")
+                   tar = male(doc3.mass,doc3.height,doc3.age);
+                   else
+                   tar = female(doc3.mass,doc3.height,doc3.age);
+                   res.render("excresis",{Burned_calorie:doc2.calorie1,target:tar,Exe:doc,List:doc1});
+                })
+                .catch((err)=>{
+                    console.log(err);
+                })
+               
             })
             .catch((err)=>{
                 console.log(err);
