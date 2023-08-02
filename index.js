@@ -137,7 +137,7 @@ app.post("/submit/add",upload.single('image'),function(req,res){
   console.log(req.file);
   data.create({
      tag:req.user.username,
-     calorie:req.body.carlorie,
+     calorie:req.body.calorie,
      protein:req.body.protein,
      fat:req.body.fat,
      imag:req.file.filename,
