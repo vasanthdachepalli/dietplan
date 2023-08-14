@@ -146,7 +146,7 @@ app.post("/submit/add",upload.single('image'),function(req,res){
    } );
    res.redirect("/submit");
 })
-//------------------------------control swifter the statements used to give control to another files ---------------------------------------------
+//------------------------------control swifter the statements used to give control to another files ,didnot touch---------------------------------------------
 app.all("/exe_add",require("./controller/control_excerise"));
 app.all("/exercise",require("./controller/excersie"));
 app.all("/calorie",require("./controller/calorie_tracker"));
@@ -161,7 +161,9 @@ app.get("/logout", function(req, res){
   req.logout();
   res.redirect("/");
 });
-
+app.get("/home",function(req,res){
+  res.render("home_static")
+})
 app.get("/profile",(res,req)=>{
   req.render('profile');
 })
@@ -239,7 +241,7 @@ app.post("/login", function(req, res){
         let b = require("./delete")
         b();
         console.log("check 2");
-        res.redirect("/submit");
+        res.redirect("/home");
     
       });
      
